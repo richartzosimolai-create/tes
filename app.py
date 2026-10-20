@@ -9,7 +9,7 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 .stApp {
     background-color: #FFE9A8;
@@ -28,9 +28,9 @@ header[data-testid="stHeader"] {
     padding: 3rem 2rem 4rem;
 }
 
-/* MAIN TITLE */
+/* main title */
 .main-title {
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'Archivo Black', sans-serif;
     text-align: center;
     font-size: clamp(2.7rem, 7vw, 5.5rem);
     font-weight: 700;
@@ -52,9 +52,9 @@ header[data-testid="stHeader"] {
     color: #17130C;
 }
 
-/* SECTION TITLE */
+/* section title */
 .section-title {
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'Archivo Black', sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
     text-align: center;
@@ -62,7 +62,7 @@ header[data-testid="stHeader"] {
     color: #17130C;
 }
 
-/* CATEGORY CARDS */
+/* kotak kategori */
 .category-card {
     min-height: 310px;
     padding: 28px;
@@ -113,7 +113,7 @@ header[data-testid="stHeader"] {
     line-height: 1.7;
 }
 
-/* FOOTER */
+/* footer */
 .footer {
     margin-top: 4rem;
     padding-top: 1.5rem;
@@ -148,7 +148,7 @@ header[data-testid="stHeader"] {
 """, unsafe_allow_html=True)
 
 
-# ---------- TITLE AT TOP CENTER ----------
+# judul
 st.markdown("""
 <h1 class="main-title">
     CATALYST CUP<br>VOL 2.0
