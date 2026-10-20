@@ -11,14 +11,7 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-#GithubIcon,
-.viewerBadge_container__1QSob,
-.viewerBadge_link__1S4PT,
-a[href*="github.com"] {
-    display: none !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-}
+
 
 .stApp {
     background-color: #FFE9A8;
