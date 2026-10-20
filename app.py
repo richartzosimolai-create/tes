@@ -3,229 +3,193 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Catalyst Cup Vol 2.0",
-    page_icon="🏆",
+    page_icon="🎨",
     layout="wide"
 )
 
-# style css
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 .stApp {
-    background:
-        radial-gradient(ellipse at 10% 0%, rgba(46,179,255,0.14), transparent 34%),
-        radial-gradient(ellipse at 90% 8%, rgba(174,255,62,0.10), transparent 30%),
-        #090d18;
-    color: #f7f8fc;
-    font-family: 'Inter', sans-serif;
-}
-
-.block-container {
-    max-width: 1120px;
-    padding-top: 2rem;
-    padding-bottom: 4rem;
+    background-color: #FFE9A8;
+    background-image:
+        radial-gradient(#E8D28F 0.7px, transparent 0.7px);
+    background-size: 8px 8px;
+    color: #17130C;
 }
 
 header[data-testid="stHeader"] {
     background: transparent;
 }
 
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 13px;
-    font-weight: 900;
-    letter-spacing: 3px;
-    margin-bottom: 65px;
+.block-container {
+    max-width: 1150px;
+    padding: 3rem 2rem 4rem;
 }
 
-.brand-mark {
-    background: #a5ff3f;
-    color: #090d18;
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
+/* MAIN TITLE */
+.main-title {
+    font-family: 'Fredoka', sans-serif;
+    text-align: center;
+    font-size: clamp(2.7rem, 7vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    color: #FFD43B;
+    -webkit-text-stroke: 2px #17130C;
+    text-shadow: 4px 5px 0 #17130C;
+    margin: 0 auto 1.5rem;
 }
 
-.eyebrow {
-    color: #a5ff3f;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 4px;
-    margin-bottom: 18px;
+.description {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #17130C;
 }
 
-.hero-title {
-    font-size: clamp(42px, 8vw, 92px);
-    line-height: 0.98;
-    letter-spacing: -5px;
-    font-weight: 900;
-    margin: 0;
-    color: #f7f8fc;
+/* SECTION TITLE */
+.section-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 2rem 0 1.5rem;
+    color: #17130C;
 }
 
-.hero-title span {
-    color: #a5ff3f;
-}
-
-.hero-copy {
-    max-width: 650px;
-    margin-top: 25px;
-    margin-bottom: 55px;
-    color: #aab5ca;
-    font-size: 16px;
-    line-height: 1.9;
-}
-
-.section-label {
-    margin-bottom: 20px;
-    color: #f7f8fc;
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
+/* CATEGORY CARDS */
 .category-card {
-    min-height: 275px;
-    padding: 30px;
-    border-radius: 22px;
-    border: 1px solid rgba(255,255,255,0.13);
-    background: linear-gradient(
-        145deg,
-        rgba(26,39,61,0.96),
-        rgba(15,22,37,0.96)
-    );
-    box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+    min-height: 310px;
+    padding: 28px;
+    border: 3px solid #17130C;
+    border-radius: 4px;
+    box-shadow: 6px 6px 0 #17130C;
+    transition: transform 0.2s ease;
+}
+
+.category-card:hover {
+    transform: translate(-2px, -2px);
+}
+
+.sport-card {
+    background-color: #1676E8;
+    color: white;
+}
+
+.art-card {
+    background-color: #E52525;
+    color: white;
 }
 
 .card-icon {
-    width: 55px;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    background: rgba(165,255,63,0.12);
-    font-size: 28px;
-    margin-bottom: 30px;
+    font-size: 3.5rem;
+    margin-bottom: 1.4rem;
 }
 
-.card-tag {
-    color: #a5ff3f;
-    font-size: 11px;
-    letter-spacing: 3px;
-    font-weight: 800;
-    margin-bottom: 10px;
+.card-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 0.7rem;
 }
 
 .card-title {
-    color: #f7f8fc;
-    font-size: 27px;
-    letter-spacing: -1px;
-    font-weight: 900;
-    margin-bottom: 12px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
 }
 
-.card-desc {
-    color: #aab5ca;
-    font-size: 14px;
-    line-height: 1.8;
+.card-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.7;
 }
 
+/* FOOTER */
 .footer {
-    margin-top: 55px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    color: #71809b;
-    font-size: 11px;
-    letter-spacing: 1px;
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #17130C;
     display: flex;
     justify-content: space-between;
-    gap: 15px;
     flex-wrap: wrap;
+    gap: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
 }
 
 @media (max-width: 700px) {
-    .brand {
-        margin-bottom: 45px;
+    .block-container {
+        padding: 2rem 1.2rem 3rem;
     }
 
-    .hero-title {
-        letter-spacing: -2px;
+    .main-title {
+        letter-spacing: -1px;
+        -webkit-text-stroke: 1px #17130C;
+        text-shadow: 3px 3px 0 #17130C;
     }
 
     .category-card {
-        min-height: 230px;
-        padding: 24px;
-    }
-
-    .hero-copy {
-        font-size: 14px;
+        min-height: 250px;
+        padding: 22px;
     }
 }
 </style>
 """, unsafe_allow_html=True)
 
 
-# ---------- HEADER ----------
+# ---------- TITLE AT TOP CENTER ----------
 st.markdown("""
-<div class="brand">
-    <span class="brand-mark">C</span>
-    <span>CATALYST CUP</span>
-</div>
-
-<div class="eyebrow">THE NEXT CHAPTER STARTS HERE</div>
-
-<h1 class="hero-title">
-    CATALYST CUP<br>
-    <span>VOL 2.0</span>
+<h1 class="main-title">
+    CATALYST CUP<br>VOL 2.0
 </h1>
 
-<p class="hero-copy">
+<div class="description">
     Tulis penjelasan tentang Catalyst Cup Vol 2.0 di sini.
     Kamu bisa mengganti teks ini nanti sesuai kebutuhan acara.
-</p>
-""", unsafe_allow_html=True)
+</div>
 
-
-# ---------- CATEGORY ----------
-st.markdown("""
-<div class="section-label">
-    CHOOSE YOUR CATEGORY
-    <span style="color:#a5ff3f;"> / 02</span>
+<div class="section-title">
+    PILIH KATEGORI
 </div>
 """, unsafe_allow_html=True)
 
+
+# ---------- TWO CATEGORY BOXES ----------
 col1, col2 = st.columns(2, gap="large")
 
 with col1:
     st.markdown("""
-    <div class="category-card">
+    <div class="category-card sport-card">
         <div class="card-icon">🏆</div>
-        <div class="card-tag">CATEGORY 01</div>
+        <div class="card-label">CATEGORY 01</div>
         <div class="card-title">SPORT &amp; ESPORT</div>
-        <div class="card-desc">
+        <div class="card-description">
             Kompetisi olahraga dan esport.
-            Informasi serta registrasi akan ditambahkan di sini.
+            Informasi registrasi akan ditambahkan nanti.
         </div>
     </div>
     """, unsafe_allow_html=True)
 
 with col2:
     st.markdown("""
-    <div class="category-card">
+    <div class="category-card art-card">
         <div class="card-icon">🎨</div>
-        <div class="card-tag">CATEGORY 02</div>
+        <div class="card-label">CATEGORY 02</div>
         <div class="card-title">ART</div>
-        <div class="card-desc">
-            Kategori kreativitas dan seni.
-            Informasi serta registrasi akan ditambahkan di sini.
+        <div class="card-description">
+            Tunjukkan kreativitas dan karya senimu.
+            Informasi registrasi akan ditambahkan nanti.
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -234,7 +198,7 @@ with col2:
 # ---------- FOOTER ----------
 st.markdown("""
 <div class="footer">
-    <span>© CATALYST CUP VOL 2.0</span>
+    <span>CATALYST CUP VOL 2.0</span>
     <span>COMPETE · CREATE · CONNECT</span>
 </div>
 """, unsafe_allow_html=True)
