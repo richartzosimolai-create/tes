@@ -12,6 +12,28 @@ st.markdown("""
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 
+/* ===== sembunyikan elemen bawaan Streamlit ===== */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+[data-testid="stToolbar"] {display: none !important;}
+[data-testid="stDecoration"] {display: none !important;}
+[data-testid="stStatusWidget"] {display: none !important;}
+[data-testid="stAppDeployButton"] {display: none !important;}
+.stAppDeployButton {display: none !important;}
+
+/* badge "Hosted with Streamlit" / profil pembuat */
+[class*="viewerBadge"],
+[class*="_profileContainer"],
+[class*="profileContainer"],
+[class*="StatusWidget"],
+a[href*="streamlit.io/cloud"],
+a[href*="share.streamlit.io"] {
+    display: none !important;
+    visibility: hidden !important;
+}
+/* ============================================= */
+
 
 .stApp {
     background-color: #FFE9A8;
@@ -23,6 +45,7 @@ st.markdown("""
 
 header[data-testid="stHeader"] {
     background: transparent;
+    display: none !important;
 }
 
 .block-container {
@@ -205,4 +228,3 @@ st.markdown("""
     <span>sgsgrsf</span>
 </div>
 """, unsafe_allow_html=True)
-
