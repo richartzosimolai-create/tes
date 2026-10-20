@@ -1,4 +1,4 @@
-
+```python
 import streamlit as st
 
 st.set_page_config(
@@ -7,9 +7,14 @@ st.set_page_config(
     layout="wide"
 )
 
+
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+#GithubIcon {
+    display: none !important;
+}
 
 .stApp {
     background-color: #FFE9A8;
@@ -203,3 +208,4 @@ st.markdown("""
     <span>sgsgrsf</span>
 </div>
 """, unsafe_allow_html=True)
+```
