@@ -36,10 +36,15 @@ header[data-testid="stHeader"] {
     font-weight: 700;
     line-height: 1.05;
     letter-spacing: -2px;
+
     color: #4BE373;
+    -webkit-text-fill-color: #4BE373;
+    -webkit-text-stroke: 1px #17130C;
+    paint-order: stroke fill;
+    text-shadow: 3px 4px 0 #17130C;
+
     margin: 0 auto 1.5rem;
 }
-
 
 .description {
     max-width: 700px;
