@@ -9,7 +9,7 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family&Inter:wght@400;500;600;700;800;900&display=swap');
 
 .stApp {
     background-color: #FFE9A8;
