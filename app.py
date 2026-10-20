@@ -11,7 +11,8 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-#GithubIcon {
+#GithubIcon,
+a[href*="github.com"] {
     display: none !important;
 }
 
