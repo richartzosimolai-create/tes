@@ -9,7 +9,7 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family&Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 .stApp {
     background-color: #FFE9A8;
@@ -31,15 +31,7 @@ header[data-testid="stHeader"] {
 /* main title */
 .main-title {
     font-family: 'Archivo Black', sans-serif;
-    text-align: center;
-    font-size: clamp(2.7rem, 7vw, 5.5rem);
-    font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: -2px;
-    color: #FFD43B;
-    -webkit-text-stroke: 2px #17130C;
-    text-shadow: 4px 5px 0 #17130C;
-    margin: 0 auto 1.5rem;
+    font-weight: 400;
 }
 
 .description {
