@@ -37,8 +37,8 @@ header[data-testid="stHeader"] {
     line-height: 1.05;
     letter-spacing: -2px;
     color: #4BE373;
-    -webkit-text-stroke: 2px #17130C;
-    text-shadow: 4px 5px 0 #17130C;
+    -webkit-text-stroke: 1px #17130C;
+    text-shadow: 2px 3px 0 #17130C;
     margin: 0 auto 1.5rem;
 }
 
