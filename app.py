@@ -155,17 +155,16 @@ st.markdown("""
 </h1>
 
 <div class="description">
-    Tulis penjelasan tentang Catalyst Cup Vol 2.0 di sini.
-    Kamu bisa mengganti teks ini nanti sesuai kebutuhan acara.
+     hvsuheii
 </div>
 
 <div class="section-title">
-    PILIH KATEGORI
+    Choose Your Category
 </div>
 """, unsafe_allow_html=True)
 
 
-# ---------- TWO CATEGORY BOXES ----------
+# box kategori sport esport art
 col1, col2 = st.columns(2, gap="large")
 
 with col1:
@@ -175,8 +174,7 @@ with col1:
         <div class="card-label">CATEGORY 01</div>
         <div class="card-title">SPORT &amp; ESPORT</div>
         <div class="card-description">
-            Kompetisi olahraga dan esport.
-            Informasi registrasi akan ditambahkan nanti.
+            ctcytctycy
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -188,17 +186,16 @@ with col2:
         <div class="card-label">CATEGORY 02</div>
         <div class="card-title">ART</div>
         <div class="card-description">
-            Tunjukkan kreativitas dan karya senimu.
-            Informasi registrasi akan ditambahkan nanti.
+            tytcxjrtxjxj
         </div>
     </div>
     """, unsafe_allow_html=True)
 
 
-# ---------- FOOTER ----------
+# footer
 st.markdown("""
 <div class="footer">
     <span>CATALYST CUP VOL 2.0</span>
-    <span>COMPETE · CREATE · CONNECT</span>
+    <span>sgsgrsf</span>
 </div>
 """, unsafe_allow_html=True)
