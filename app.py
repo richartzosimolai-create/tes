@@ -33,7 +33,7 @@ header[data-testid="stHeader"] {
     font-family: 'Fredoka', sans-serif;
     text-align: center;
     font-size: clamp(2.7rem, 7vw, 5.5rem);
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.05;
     letter-spacing: -2px;
 
